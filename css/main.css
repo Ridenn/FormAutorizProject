@@ -1,0 +1,53 @@
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+label.error { float: none;
+  color: red;
+  margin: 0 .5em 0 0;
+  vertical-align: top;
+  font-size: 10px
+}
+
+p {
+  clear: both;
+}
+
+.submit {
+  margin-top: 1em;
+}
+
+em {
+  font-weight: bold;
+  padding-right: 1em;
+  vertical-align: top;
+}
+
+.geral{
+  height: 100%;
+  width: 100%;
+  background-color: #353535;
+}
+
+.form-horizontal{
+  background-color: white;
+  margin: 50px 0 20px 0;
+  border-radius: 12px;
+}
+
+.form-horizontal h2{
+  margin: 15px 10px 50px 10px;
+  padding: 5px 0px 10px 10px;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-group .col-md-3 {
+  width: 222px;
+}
+
+.necessidades{
+  margin-bottom: 35px;
+}

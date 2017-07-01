@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autorização e Acesso</title>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/additional-methods.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="col-md-3 geral">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 principal">
+        <form id="autorizForm" class="form-horizontal" data-toggle="validator">
+          <fieldset>
+            <h2>Autorização e Acesso FHK_STAR_HQ3</h2>
+
+            <!-- Cod acesso-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="cod_acesso">Cód. de acesso</label>
+              <div class="col-md-3">
+                <input id="cod_acesso" name="cod_acesso" type="text" maxlength="5" placeholder="Chave_FHK_J_R_R_Tolken" class="form-control input-md" required>
+              </div>
+            </div>
+
+            <!-- email-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="email_autoriz">Email</label>
+              <div class="col-md-5">
+                <input id="email_autoriz" name="email_autoriz" type="email" placeholder="Digite seu e-mail" data-error="Por favor, informe um e-mail correto." class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- nome-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="text_nome">Nome</label>
+              <div class="col-md-5">
+                <input id="text_nome" name="text_nome" type="text" maxlength="50" placeholder="Digite seu nome" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- id -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="text_nome">Número de identif. interplanetária</label>
+              <div class="col-md-3">
+                <input id="text_id" name="text_id" type="number" maxlength="8" placeholder="ID interplanetário" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- planeta -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="planeta_natal">Planeta Natal</label>
+              <div class="col-md-3">
+                <select id="planeta_natal" name="planeta_natal" class="form-control">
+                  <option value="default">Escolha uma opção</option>
+                  <option value="1">Kruart-mon</option>
+                  <option value="2">Clivelle</option>
+                  <option value="3">Kracken</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- necessidades -->
+            <div class="form-group necessidades">
+              <label class="col-md-4 control-label" for="necessidades">Necessidades</label>
+              <div class="col-md-4">
+              <div class="checkbox">
+                <label for="necessidades-0">
+                  <input type="checkbox" data-error="Marque no mínimo um campo!" name="necessidades" id="necessidades-0" value="1">
+                  Abastecimento/Combustível
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="necessidades-1">
+                  <input type="checkbox" name="necessidades" id="necessidades-1" value="2">
+                  Descarregar Carga
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="necessidades-2">
+                  <input type="checkbox" name="necessidades" id="necessidades-2" value="3">
+                  Manutenção Elétrica/Eletrônica
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="necessidades-3">
+                  <input type="checkbox" name="necessidades" id="necessidades-3" value="4">
+                  Manutenção Mecânica
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="necessidades-4">
+                  <input type="checkbox" name="necessidades" id="necessidades-4" value="5">
+                  Manutenção de Propulsores
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="necessidades-5">
+                  <input type="checkbox" name="necessidades" id="necessidades-5" value="6">
+                  Verificação de Sistemas
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="necessidades-6">
+                  <input type="checkbox" name="necessidades" id="necessidades-6" value="7">
+                  Limpeza da Aeronave
+                </label>
+            	</div>
+              </div>
+            </div>
+
+            <!-- nave -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="nave">Nave</label>
+              <div class="col-md-3">
+                <select id="nave" name="nave" class="form-control">
+                  <option value="default">Escolha uma opção</option>
+                  <option value="1">B-WING PROTOTYPE (BLADE WING)</option>
+                  <option value="2">B-WING FIGHTER</option>
+                  <option value="3">BROKEN HORN</option>
+                  <option value="4">CLONE Z-95 STARFIGHTER</option>
+                  <option value="5">CRUCIBLE</option>
+                  <option value="6">GR-75 MEDIUM TRANSPORT</option>
+                  <option value="7">GX1 SHORT HAULE</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- data pouso -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="dt_pouso">Data pouso</label>
+              <div class="col-md-3">
+              <input id="dt_pouso" name="dt_pouso" type="datetime-local" placeholder="Data de pouso" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- data decol -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="dt_decolagem">Data decolagem</label>
+              <div class="col-md-3">
+              <input id="dt_decolagem" name="dt_decolagem" type="datetime-local" placeholder="Data de decolagem" class="form-control input-md" required="">
+              </div>
+            </div>
+
+            <!-- File Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selfie_select">Selfie</label>
+              <div class="col-md-4">
+                <input id="selfie_select" name="selfie_select" class="input-file" type="file" accept='image/*'>
+              </div>
+            </div>
+
+            <!-- Solicitar autorização -->
+            <div class="form-group">
+              <div class="col-md-12">
+                <button id="button_autoriz" name="button_autoriz" class="btn btn-primary">Solicitar autorização</button>
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </body>
+</html>
