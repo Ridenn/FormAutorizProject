@@ -34,14 +34,16 @@ em {
 .form-horizontal{
   background-color: white;
   margin: 50px 0 20px 0;
+  border: 1px solid;
   border-radius: 12px;
+  border-color: #F79633;
 }
 
 .form-horizontal h2{
   margin: 15px 10px 50px 10px;
   padding: 5px 0px 10px 10px;
   border-bottom: 1px solid;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(247, 150, 51, 0.5);
 }
 
 .form-group .col-md-3 {
@@ -50,4 +52,18 @@ em {
 
 .necessidades{
   margin-bottom: 35px;
+}
+
+.ship{
+  text-align: right;
+  padding-right: 1px;
+  display:block;
+}
+
+.shipImg{
+  width: 200px;
+}
+
+.btn{
+  text-align: right;
 }

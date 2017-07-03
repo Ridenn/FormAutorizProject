@@ -41,7 +41,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="text_nome">Nome</label>
               <div class="col-md-5">
-                <input id="text_nome" name="text_nome" type="text" maxlength="50" placeholder="Digite seu nome" class="form-control input-md" required="">
+                <input id="text_nome" name="text_nome" type="text" maxlength="50" placeholder="Digite seu nome" class="form-control input-md"  onblur="leNome()" required="">
               </div>
             </div>
 
@@ -57,12 +57,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="planeta_natal">Planeta Natal</label>
               <div class="col-md-3">
-                <select id="planeta_natal" name="planeta_natal" class="form-control">
-                  <option value="default">Escolha uma opção</option>
-                  <option value="1">Kruart-mon</option>
-                  <option value="2">Clivelle</option>
-                  <option value="3">Kracken</option>
-                </select>
+                <select id="planeta_natal" name="planeta_natal" class="form-control"></select>
               </div>
             </div>
 
@@ -120,16 +115,23 @@
               <label class="col-md-4 control-label" for="nave">Nave</label>
               <div class="col-md-3">
                 <select id="nave" name="nave" class="form-control">
-                  <option value="default">Escolha uma opção</option>
+                  <option value="default">Qual é a sua nave?</option>
                   <option value="1">B-WING PROTOTYPE (BLADE WING)</option>
                   <option value="2">B-WING FIGHTER</option>
                   <option value="3">BROKEN HORN</option>
                   <option value="4">CLONE Z-95 STARFIGHTER</option>
                   <option value="5">CRUCIBLE</option>
                   <option value="6">GR-75 MEDIUM TRANSPORT</option>
-                  <option value="7">GX1 SHORT HAULE</option>
+                  <option value="7">GX1 SHORT HAULER</option>
                 </select>
               </div>
+            </div>
+
+            <!-- nave image-->
+            <div class="form-group">
+              <span class="col-md-7 ship">
+                <img class="shipImg" src="images/default.jpg"></img>
+              </span>
             </div>
 
             <!-- data pouso -->
@@ -158,7 +160,7 @@
 
             <!-- Solicitar autorização -->
             <div class="form-group">
-              <div class="col-md-12">
+              <div class="col-md-7 btn">
                 <button id="button_autoriz" name="button_autoriz" class="btn btn-primary">Solicitar autorização</button>
               </div>
             </div>
@@ -168,6 +170,7 @@
       </div>
       <div class="col-md-2"></div>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/valida-form.js"></script>
+    <script type="text/javascript" src="js/troca-select.js"></script>
   </body>
 </html>
