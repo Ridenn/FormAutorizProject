@@ -28,6 +28,7 @@ em {
 .geral{
   height: 100%;
   width: 100%;
+  margin-top: 50px;
   background-color: #353535;
 }
 
@@ -39,8 +40,8 @@ em {
   border-color: #F79633;
 }
 
-.form-horizontal h2{
-  margin: 15px 10px 50px 10px;
+.titulo{
+  margin: 15px 10px 30px 10px;
   padding: 5px 0px 10px 10px;
   border-bottom: 1px solid;
   border-color: rgba(247, 150, 51, 0.5);
@@ -64,6 +65,41 @@ em {
   width: 200px;
 }
 
-.btn{
+.btnAutoriz{
   text-align: right;
+}
+
+.contador{
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 25px;
+  padding: 5px 0px 10px 10px;
+}
+
+#button_autoriz{
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+  background-color: #F79633;
+}
+
+.navbar{
+  background-color: #F79633;
+  border: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-brand{
+  padding: 3px 10px;
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color: #464646;
+  font-size: 18px;
 }

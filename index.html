@@ -14,12 +14,26 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo_fhk.png" class="image-responsive logo"/>
+      </a>
+      <ul class="nav navbar-nav">
+        <li><a class="reset-btn" onclick="javascript:limparCampos()" href="#">Resetar Formulário</a></li>
+      </ul>
+    </nav>
+
     <div class="col-md-3 geral">
       <div class="col-md-2"></div>
       <div class="col-md-8 principal">
-        <form id="autorizForm" class="form-horizontal" data-toggle="validator">
+        <form id="autorizForm" class="form-horizontal" action="javascript:testaEnvioEmail()" enctype="text/plain" method="post" data-toggle="validator">
           <fieldset>
-            <h2>Autorização e Acesso FHK_STAR_HQ3</h2>
+
+            <h2 class="titulo">Autorização e Acesso FHK_STAR_HQ3</h2>
+            <h3 class="contador">Solicitações de acesso: </h2>
+
 
             <!-- Cod acesso-->
             <div class="form-group">
@@ -64,49 +78,49 @@
             <!-- necessidades -->
             <div class="form-group necessidades">
               <label class="col-md-4 control-label" for="necessidades">Necessidades</label>
-              <div class="col-md-4">
-              <div class="checkbox">
-                <label for="necessidades-0">
-                  <input type="checkbox" data-error="Marque no mínimo um campo!" name="necessidades" id="necessidades-0" value="1">
-                  Abastecimento/Combustível
-                </label>
-            	</div>
-              <div class="checkbox">
-                <label for="necessidades-1">
-                  <input type="checkbox" name="necessidades" id="necessidades-1" value="2">
-                  Descarregar Carga
-                </label>
-            	</div>
-              <div class="checkbox">
-                <label for="necessidades-2">
-                  <input type="checkbox" name="necessidades" id="necessidades-2" value="3">
-                  Manutenção Elétrica/Eletrônica
-                </label>
-            	</div>
-              <div class="checkbox">
-                <label for="necessidades-3">
-                  <input type="checkbox" name="necessidades" id="necessidades-3" value="4">
-                  Manutenção Mecânica
-                </label>
-            	</div>
-              <div class="checkbox">
-                <label for="necessidades-4">
-                  <input type="checkbox" name="necessidades" id="necessidades-4" value="5">
-                  Manutenção de Propulsores
-                </label>
-            	</div>
-              <div class="checkbox">
-                <label for="necessidades-5">
-                  <input type="checkbox" name="necessidades" id="necessidades-5" value="6">
-                  Verificação de Sistemas
-                </label>
-            	</div>
-              <div class="checkbox">
-                <label for="necessidades-6">
-                  <input type="checkbox" name="necessidades" id="necessidades-6" value="7">
-                  Limpeza da Aeronave
-                </label>
-            	</div>
+              <div id="checkbox" class="col-md-4">
+                <div class="checkbox">
+                  <label class="labelNecess" for="necessidades-0">
+                    <input type="checkbox" data-error="Marque no mínimo um campo!" name="necessidades" id="necessidades-0" value="1">
+                    Abastecimento/Combustível
+                  </label>
+              	</div>
+                <div class="checkbox">
+                  <label class="labelNecess" for="necessidades-1">
+                    <input type="checkbox" name="necessidades" id="necessidades-1" value="2">
+                    Descarregar Carga
+                  </label>
+              	</div>
+                <div class="checkbox">
+                  <label class="labelNecess" for="necessidades-2">
+                    <input type="checkbox" name="necessidades" id="necessidades-2" value="3">
+                    Manutenção Elétrica/Eletrônica
+                  </label>
+              	</div>
+                <div class="checkbox">
+                  <label class="labelNecess" for="necessidades-3">
+                    <input type="checkbox" name="necessidades" id="necessidades-3" value="4">
+                    Manutenção Mecânica
+                  </label>
+              	</div>
+                <div class="checkbox">
+                  <label class="labelNecess" for="necessidades-4">
+                    <input type="checkbox" name="necessidades" id="necessidades-4" value="5">
+                    Manutenção de Propulsores
+                  </label>
+              	</div>
+                <div class="checkbox">
+                  <label class="labelNecess" for="necessidades-5">
+                    <input type="checkbox" name="necessidades" id="necessidades-5" value="6">
+                    Verificação de Sistemas
+                  </label>
+              	</div>
+                <div class="checkbox">
+                  <label class="labelNecess" for="necessidades-6">
+                    <input type="checkbox" name="necessidades" id="necessidades-6" value="7">
+                    Limpeza da Aeronave
+                  </label>
+              	</div>
               </div>
             </div>
 
@@ -160,11 +174,10 @@
 
             <!-- Solicitar autorização -->
             <div class="form-group">
-              <div class="col-md-7 btn">
+              <div class="col-md-7 btnAutoriz">
                 <button id="button_autoriz" name="button_autoriz" class="btn btn-primary">Solicitar autorização</button>
               </div>
             </div>
-
           </fieldset>
         </form>
       </div>
@@ -172,5 +185,7 @@
     </div>
     <script type="text/javascript" src="js/valida-form.js"></script>
     <script type="text/javascript" src="js/troca-select.js"></script>
+    <script type="text/javascript" src="js/envia-email.js"></script>
+    <script type="text/javascript" src="js/atualiza-contador.js"></script>
   </body>
 </html>
