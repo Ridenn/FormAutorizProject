@@ -46,7 +46,7 @@ function verificaNave(nave) {
 
 function verificaEmail(boxes, array, imageLink) {
   var emails = emailUser.value;
-  for (var i = 0; i <= boxes.length; i++) {
+  for (var i = 0; i <= boxes.length - 1; i++) {
     textNecessidades += array[i].innerText + "; ";
     switch (boxes[i]) {
       case "1":
@@ -74,6 +74,7 @@ function verificaEmail(boxes, array, imageLink) {
         enviaEmail(emails, imageLink);
     }
   }
+  enviaEmail(emails, imageLink);
 }
 
 function enviaEmail(email, imageLink) {
@@ -81,7 +82,7 @@ function enviaEmail(email, imageLink) {
   // foram retirados acentos por questão de incompatibilidade com alguns os provedores de email
   var link = "mailto:"+email
            + "&subject=" + "Autorizacao e Acesso FHK_STAR_HQ3"
-           + "&body=" + "INFORMACOES PARA AUTORIZACAO E ACESSO DE PILOTO NO HANGAR %0D%0A %0D%0A"
+           + "&body=" + "INFORMACOES PARA AUTORIZACAO E ACESSO DE PILOTO NO HANGAR: %0D%0A %0D%0A"
            + "Codigo de acesso: " +document.getElementById("cod_acesso").value
            + "%0D%0A Email: " +document.getElementById("email_autoriz").value
            + "%0D%0A Nome: " +document.getElementById("text_nome").value
