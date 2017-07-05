@@ -9,23 +9,23 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.validate.js"></script>
     <script type="text/javascript" src="js/additional-methods.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
 
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <a class="navbar-brand" href="#">
-        <img src="images/logo_fhk.png" class="image-responsive logo"/>
+        <img src="images/logo_fhk.png" class="image-responsive logo" onmouseover="hover(this);" onmouseout="unhover(this);"/>
       </a>
       <ul class="nav navbar-nav">
-        <li><a class="reset-btn" onclick="javascript:limparCampos()" href="#">Resetar Formulário</a></li>
+        <li><a class="reset-btn" onclick="javascript:limparCampos()" href="#">RESETAR FORM</a></li>
       </ul>
     </nav>
 
-    <div class="col-md-3 geral">
+    <div class="col-md-3 parallax" data-speed="8">
       <div class="col-md-2"></div>
       <div class="col-md-8 principal">
         <form id="autorizForm" class="form-horizontal" action="javascript:testaEnvioEmail()" enctype="text/plain" method="post" data-toggle="validator">

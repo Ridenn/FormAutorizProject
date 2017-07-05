@@ -1,3 +1,22 @@
+@font-face { font-family: open_sans_condensedbold; src: url('fonts/OpenSans-CondBold.ttf'); }
+
+body{
+  font-family:"Open Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+.parallax{
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+  /*background-color: #353535;*/
+  background-image: url(../images/parallax2-min.jpg);
+  background-position: 50% 49px;
+  background-size: cover;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
 
 label {
   display: block;
@@ -25,14 +44,8 @@ em {
   vertical-align: top;
 }
 
-.geral{
-  height: 100%;
-  width: 100%;
-  margin-top: 50px;
-  background-color: #353535;
-}
 
-.form-horizontal{
+#autorizForm{
   background-color: white;
   margin: 50px 0 20px 0;
   border: 1px solid;
@@ -40,8 +53,12 @@ em {
   border-color: #F79633;
 }
 
+#autorizForm fieldset{
+    margin-left: 35px;
+}
+
 .titulo{
-  margin: 15px 10px 30px 10px;
+  margin: 15px 10px 30px -20px;
   padding: 5px 0px 10px 10px;
   border-bottom: 1px solid;
   border-color: rgba(247, 150, 51, 0.5);
@@ -72,7 +89,7 @@ em {
 .contador{
   text-align: right;
   margin-right: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding: 5px 0px 10px 10px;
 }
 
@@ -82,6 +99,18 @@ em {
   border-radius: 3px;
   border: none;
   background-color: #F79633;
+  margin-left: 280px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  #button_autoriz{
+    margin-left: 1px;
+    float: left;
+  }
+  .shipImg {
+    float: left;
+  }
 }
 
 .navbar{
@@ -99,7 +128,17 @@ em {
   width: 200px;
 }
 
+.navbar-brand img:hover{
+  src: url('images/logo_fhk2.png');
+}
+
 .navbar-inverse .navbar-nav > li > a{
-  color: #464646;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 18px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+  color: #F5C18C;
   font-size: 18px;
 }

@@ -105,8 +105,3 @@ function enviaEmail(email, imageLink) {
 	  // $myform.prop ('action','mailto:'+email);
 	  // $myform.submit();
 }
-
-function limparCampos() {
-  $("#autorizForm")[0].reset();
-  $(".shipImg").attr("src", "images/default.jpg");
-}

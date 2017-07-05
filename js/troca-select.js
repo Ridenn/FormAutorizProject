@@ -39,3 +39,10 @@ function limparPlanetas() {
 document.getElementById('nave').onchange = function(){
   document.querySelectorAll('.shipImg')[0].src = 'images/' + this.value + '.jpg';
 };
+
+function hover(element) {
+    element.setAttribute('src', 'images/logo_fhk2.png');
+}
+function unhover(element) {
+    element.setAttribute('src', 'images/logo_fhk.png');
+}
