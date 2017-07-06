@@ -24,7 +24,6 @@ jQuery.validator.addMethod("maiorQue", function(value, element, param) {
 $('#autorizForm').validate({
     rules:{
       cod_acesso:{
-        // campoNome será obrigatório (required) e terá tamanho mínimo (minLength)
         required: true, minlength: 5, codvalido: true
       },
       email_autoriz:{
