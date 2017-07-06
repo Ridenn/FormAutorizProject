@@ -40,7 +40,7 @@ $('#autorizForm').validate({
         valueNotEquals: "default"
       },
       necessidades:{
-              required: true
+        required: true
       },
       nave:{
         required: true,
@@ -69,6 +69,9 @@ $('#autorizForm').validate({
     },
     text_nome:{
       required: "Digite o seu nome"
+    },
+    text_id:{
+      required: "Digite a sua identicação interplanetária"
     },
     planeta_natal:{
       valueNotEquals: "Selecione um planeta"
