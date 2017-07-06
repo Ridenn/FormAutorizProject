@@ -74,6 +74,7 @@ $('#autorizForm').validate({
       required: "Digite a sua identicação interplanetária"
     },
     planeta_natal:{
+      required: "Selecione o seu planeta natal",
       valueNotEquals: "Selecione um planeta"
     },
     necessidades: {
