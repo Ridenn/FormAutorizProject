@@ -30,6 +30,9 @@ $('#autorizForm').validate({
         required: true, email: true
       },
       text_nome:{
+        required: true, maxlength: 50
+      },
+      text_id:{
         required: true
       },
       planeta_natal:{
